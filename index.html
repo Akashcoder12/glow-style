@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Glow & Style — Salon</title>
+    <meta
+      name="description"
+      content="Glow & Style Salon — Beauty, Grooming, Haircare, Makeup. Book instantly via WhatsApp."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(6px);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white/80 glass shadow-sm">
+      <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+        <a href="#home" class="flex items-center gap-3">
+          <img
+            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=200"
+            class="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <h1 class="font-bold text-lg">Glow & Style</h1>
+            <p class="text-xs text-gray-600">Salon • Beauty • Grooming</p>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex gap-6 items-center text-sm">
+          <a href="#services" class="hover:text-pink-600">Services</a>
+          <a href="#pricing" class="hover:text-pink-600">Pricing</a>
+          <a href="#gallery" class="hover:text-pink-600">Gallery</a>
+          <a href="#contact" class="hover:text-pink-600">Contact</a>
+          <a
+            href="#"
+            id="bookBtn"
+            class="px-4 py-2 bg-pink-500 text-white rounded-md"
+            >Book on WhatsApp</a
+          >
+        </nav>
+
+        <button id="menuToggle" class="md:hidden p-2 bg-gray-100 rounded-md">
+          Menu
+        </button>
+      </div>
+
+      <div id="mobileNav" class="hidden md:hidden border-t">
+        <div class="p-4 flex flex-col gap-3 text-sm">
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a
+            href="#"
+            id="bookBtnMobile"
+            class="px-4 py-2 bg-pink-500 text-white rounded-md"
+            >Book on WhatsApp</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      id="home"
+      class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center p-4 pt-8"
+    >
+      <div>
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          Look Your <span class="text-pink-500">Best</span> Every Day
+        </h2>
+        <p class="mt-4 text-gray-600">
+          Professional beauty, hair, and grooming services with instant WhatsApp
+          bookings. Clean space, expert staff, premium products.
+        </p>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#services" class="px-4 py-2 border rounded-md"
+            >View Services</a
+          >
+          <a href="#contact" class="px-4 py-2 bg-pink-500 text-white rounded-md"
+            >Book / Contact</a
+          >
+        </div>
+
+        <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
+          <div class="p-3 bg-white rounded-md shadow-sm">
+            <p class="text-xs text-gray-500">Timings</p>
+            <p class="font-semibold">Mon–Sun: 9:00 AM — 9:00 PM</p>
+          </div>
+          <div class="p-3 bg-white rounded-md shadow-sm">
+            <p class="text-xs text-gray-500">Phone</p>
+            <p class="font-semibold">+91 98765 00000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden shadow-lg">
+        <img
+          src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200"
+          class="w-full h-80 object-cover"
+        />
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="max-w-6xl mx-auto mt-12 p-4">
+      <h3 class="text-2xl font-bold">Our Services</h3>
+      <p class="text-gray-600">
+        Professional care for your hair, face, and body.
+      </p>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Haircut & Styling</h4>
+          <p class="text-gray-500 text-sm mt-1">
+            Trendy cuts, blow-dry, straightening
+          </p>
+        </div>
+
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Facials & Cleanup</h4>
+          <p class="text-gray-500 text-sm mt-1">Glow, detan, bridal facials</p>
+        </div>
+
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Manicure & Pedicure</h4>
+          <p class="text-gray-500 text-sm mt-1">Relaxing hand & foot spa</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="max-w-6xl mx-auto mt-12 p-4">
+      <h3 class="text-2xl font-bold">Pricing</h3>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Haircut</h4>
+          <p class="text-gray-500 text-sm">Men / Women</p>
+          <p class="mt-2 font-bold">₹150 / ₹250</p>
+          <button
+            class="mt-4 w-full bg-pink-500 text-white py-2 rounded-md book-now"
+            data-item="Haircut"
+          >
+            Book on WhatsApp
+          </button>
+        </div>
+
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Full Facial</h4>
+          <p class="text-gray-500 text-sm">Glow / Detan / Bridal</p>
+          <p class="mt-2 font-bold">₹500 – ₹1500</p>
+          <button
+            class="mt-4 w-full bg-pink-500 text-white py-2 rounded-md book-now"
+            data-item="Facial"
+          >
+            Book on WhatsApp
+          </button>
+        </div>
+
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Manicure + Pedicure</h4>
+          <p class="text-gray-500 text-sm">Relaxing spa treatment</p>
+          <p class="mt-2 font-bold">₹600</p>
+          <button
+            class="mt-4 w-full bg-pink-500 text-white py-2 rounded-md book-now"
+            data-item="Manicure & Pedicure"
+          >
+            Book on WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="max-w-6xl mx-auto mt-12 p-4">
+      <h3 class="text-2xl font-bold">Gallery</h3>
+      <p class="text-gray-600">Work, space, happy clients.</p>
+
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img
+          src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=500"
+          class="rounded-lg h-40 w-full object-cover"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=500"
+          class="rounded-lg h-40 w-full object-cover"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?q=80&w=500"
+          class="rounded-lg h-40 w-full object-cover"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1556228578-ff8d290cb5c5?q=80&w=500"
+          class="rounded-lg h-40 w-full object-cover"
+        />
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="max-w-6xl mx-auto mt-12 p-4 mb-24">
+      <h3 class="text-2xl font-bold">Contact</h3>
+
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Reach Us</h4>
+          <p class="text-gray-600">
+            Glow & Style Salon, Main Market Road, YourCity
+          </p>
+          <p class="mt-2"><b>Hours:</b> 9 AM — 9 PM</p>
+          <p class="mt-2"><b>Phone:</b> +91 98765 00000</p>
+
+          <div class="mt-4 flex gap-3">
+            <a
+              href="https://wa.me/919876500000?text=Hi%20I%20want%20to%20book%20an%20appointment"
+              target="_blank"
+              class="px-3 py-2 bg-green-500 text-white rounded-md"
+              >WhatsApp</a
+            >
+            <a href="#" class="px-3 py-2 bg-blue-600 text-white rounded-md"
+              >Facebook</a
+            >
+            <a href="#" class="px-3 py-2 bg-pink-500 text-white rounded-md"
+              >Instagram</a
+            >
+          </div>
+
+          <div class="mt-6">
+            <h5 class="font-semibold">Quick Booking</h5>
+            <form id="contactForm" class="mt-2 space-y-2">
+              <input
+                name="name"
+                class="w-full border rounded-md p-2"
+                placeholder="Your name"
+              />
+              <input
+                name="phone"
+                class="w-full border rounded-md p-2"
+                placeholder="Phone / WhatsApp"
+              />
+              <textarea
+                name="message"
+                class="w-full border rounded-md p-2"
+                rows="3"
+                placeholder="Service you want..."
+              ></textarea>
+              <div class="flex gap-2">
+                <button
+                  type="submit"
+                  class="px-4 py-2 bg-pink-500 text-white rounded-md"
+                >
+                  Send via WhatsApp
+                </button>
+                <button
+                  type="button"
+                  id="clearForm"
+                  class="px-4 py-2 border rounded-md"
+                >
+                  Clear
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Location</h4>
+          <iframe
+            class="w-full h-72 rounded"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094453!2d144.95373531531636!3d-37.81627977975132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577b5a8897e5b45!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sin!4v1703421234567"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHATSAPP FLOAT -->
+    <a
+      href="https://wa.me/919876500000?text=Hello,%20I%20want%20to%20book%20an%20appointment"
+      target="_blank"
+      class="fixed bottom-6 right-6 bg-green-500 p-3 rounded-full shadow-lg text-white"
+    >
+      💬
+    </a>
+
+    <script>
+      const PHONE = "919876500000";
+
+      document.getElementById("menuToggle").onclick = () => {
+        document.getElementById("mobileNav").classList.toggle("hidden");
+      };
+
+      function openWhatsApp(msg) {
+        window.open(
+          `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`,
+          "_blank"
+        );
+      }
+
+      document.querySelectorAll(".book-now").forEach((btn) => {
+        btn.onclick = () =>
+          openWhatsApp(`Hi, I want to book: ${btn.dataset.item}`);
+      });
+
+      document.getElementById("bookBtn").onclick = () =>
+        openWhatsApp("Hi, I want an appointment");
+      document.getElementById("bookBtnMobile").onclick = () =>
+        openWhatsApp("Hi, I want an appointment");
+
+      // Form
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const f = e.target;
+        openWhatsApp(
+          `Booking request from ${f.name.value}, Phone: ${f.phone.value}, Service: ${f.message.value}`
+        );
+      });
+
+      document.getElementById("clearForm").onclick = () =>
+        document.getElementById("contactForm").reset();
+    </script>
+  </body>
+</html>
